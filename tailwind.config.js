@@ -14,6 +14,7 @@ module.exports = {
     extend: {
       fontFamily: {
         playfair: ["Playfair Display SC", "serif"],
+        italiano: ["Italianno", "cursive"],
       },
     },
 
