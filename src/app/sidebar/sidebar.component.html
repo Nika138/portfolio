@@ -1,50 +1,76 @@
 <section
-  class="flex flex-col items-center justify-between space-y-36 w-full py-6 h-full"
+  class="flex flex-col items-center justify-between space-y-36 w-[350px] bg-[#030303] p-4 py-6 h-full"
 >
   <div class="flex items-center justify-start text-center pt-16">
-    <h1 class="text-4xl font-playfair font-bold italic text-[#e0e0e0]">NIKA</h1>
+    <h1 class="text-4xl font-playfair font-bold italic text-[#B300FF]">NIKA</h1>
   </div>
   <div class="flex flex-col items-center justify-end text-start pb-72">
-    <ul class="text-[#e0e0e0] text-2xl font-bold italic space-y-6">
-      <li class="border-b-[1px] border-gray-600 pb-1 w-[180px]">
+    <ul class="text-2xl font-bold italic space-y-6">
+      <li
+        class="border-b-[1px] border-[#181818] pb-1 w-[180px] text-[#e6e6e6]"
+        [ngClass]="{ 'active-link': isRouteActive('/') }"
+      >
         <a
+          routerLink="/"
           class="cursor-pointer duration-200 hover:duration-200 hover:text-[#8d8d8d]"
+          [ngClass]="{ 'active-link': isRouteActive('/') }"
         >
           <i class="fa-solid fa-house pr-1 w-[27px] h-[24px]"></i>
-          Home</a
-        >
+          Home
+        </a>
       </li>
-      <li class="border-b-[1px] border-gray-500 pb-1 w-[180px]">
+      <li
+        class="border-b-[1px] border-[#181818] pb-1 w-[180px] text-[#e6e6e6]"
+        [ngClass]="{ 'active-link': isRouteActive('/about') }"
+      >
         <a
+          routerLink="/about"
           class="cursor-pointer duration-200 hover:duration-200 hover:text-[#8d8d8d]"
+          [ngClass]="{ 'active-link': isRouteActive('/about') }"
         >
           <i class="fa-solid fa-user pr-1 w-[27px] h-[24px]"></i>
-          About</a
-        >
+          About
+        </a>
       </li>
-      <li class="border-b-[1px] border-gray-500 pb-1 w-[180px]">
+      <li
+        class="border-b-[1px] border-[#181818] pb-1 w-[180px] text-[#e6e6e6]"
+        [ngClass]="{ 'active-link': isRouteActive('/tech-stack') }"
+      >
         <a
+          routerLink="/tech-stack"
           class="cursor-pointer duration-200 hover:duration-200 hover:text-[#8d8d8d]"
+          [ngClass]="{ 'active-link': isRouteActive('/tech-stack') }"
         >
           <i class="fa-solid fa-microchip pr-1 w-[27px] h-[24px]"></i>
-          Tech Stack</a
-        >
+          Tech Stack
+        </a>
       </li>
-      <li class="border-b-[1px] border-gray-500 pb-1 w-[180px]">
+      <li
+        class="border-b-[1px] border-[#181818] pb-1 w-[180px] text-[#e6e6e6]"
+        [ngClass]="{ 'active-link': isRouteActive('/projects') }"
+      >
         <a
+          routerLink="/projects"
           class="cursor-pointer duration-200 hover:duration-200 hover:text-[#8d8d8d]"
+          [ngClass]="{ 'active-link': isRouteActive('/projects') }"
         >
           <i class="fa-solid fa-briefcase pr-1 w-[27px] h-[24px]"></i>
-          Projects</a
-        >
+          Projects
+        </a>
       </li>
-      <li class="border-b-[1px] border-gray-500 pb-1 w-[180px]">
+      <li
+        class="border-b-[1px] border-[#181818] pb-1 w-[180px] text-[#e6e6e6]"
+        [ngClass]="{ 'active-link': isRouteActive('/contacts') }"
+      >
         <a
+          routerLink="/contacts"
+          e6e6e6
           class="cursor-pointer duration-200 hover:duration-200 hover:text-[#8d8d8d]"
+          [ngClass]="{ 'active-link': isRouteActive('/contacts') }"
         >
           <i class="fa-solid fa-envelope pr-1 w-[27px] h-[24px]"></i>
-          Contact</a
-        >
+          Contacts
+        </a>
       </li>
     </ul>
   </div>
