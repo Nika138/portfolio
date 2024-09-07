@@ -1,5 +1,5 @@
 <section
-  class="flex flex-col bg-[#020202] h-screen xl:w-[79vw] space-y-20 py-24 px-12"
+  class="flex flex-col bg-[#020202] h-max xl:w-[79vw] xl:ml-[20.1vw] space-y-24 py-24 px-12"
 >
   <div class="flex items-start justify-start text-start">
     <h1
@@ -52,5 +52,46 @@
       </div>
     </div>
   </div>
-  <div></div>
+  <div class="flex flex-col items-center justify-center space-y-12">
+    <div
+      class="flex flex-col items-center justify-center text-center space-y-3"
+    >
+      <h1 class="text-3xl text-[#B300FF] font-bold">SEND ME AN EMAIL</h1>
+      <h2 class="text-xl text-white font-mono font-bold">Quick to respond</h2>
+    </div>
+    <div class="flex flex-col justify-center items-start space-y-8">
+      <form
+        action=""
+        class="flex flex-col space-y-8 items-start justify-center text-white"
+      >
+        <div class="flex justify-evenly items-center space-x-6">
+          <input
+            type="text"
+            class="w-[400px] h-[45px] bg-[#141414] rounded-[15px] text-[#999999] placeholder:text-[#686868] outline-none border border-[#313131] pl-4"
+            placeholder="Name"
+          />
+          <input
+            type="text"
+            class="w-[400px] h-[45px] bg-[#141414] rounded-[15px] text-[#999999] placeholder:text-[#686868] outline-none border border-[#313131] pl-4"
+            placeholder="Email"
+          />
+        </div>
+        <input
+          type="text"
+          class="w-[824px] h-[45px] bg-[#141414] rounded-[15px] text-[#999999] placeholder:text-[#686868] outline-none border border-[#313131] pl-4"
+          placeholder="Subject"
+        />
+        <textarea
+          class="w-[824px] bg-[#141414] rounded-[15px] text-[#999999] placeholder:text-[#686868] outline-none border border-[#313131] pl-4 pt-1 resize-none"
+          rows="6"
+          placeholder="Message..."
+        ></textarea>
+      </form>
+      <button
+        class="flex items-center justify-center bg-[#B300FF] w-[200px] h-[50px] border border-[#B300FF] rounded-[15px] hover:bg-[#020202] duration-300 hover:duration-300 cursor-pointer text-white hover:text-[#B300FF] font-medium text-lg"
+      >
+        Send Message
+      </button>
+    </div>
+  </div>
 </section>
