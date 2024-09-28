@@ -9,4 +9,16 @@ import { RouterModule } from '@angular/router';
   templateUrl: './main-content.component.html',
   styleUrl: './main-content.component.css',
 })
-export class MainContentComponent {}
+export class MainContentComponent {
+  isLoaded: boolean = false;
+
+  ngOnInit() {
+    setTimeout(() => {
+      this.isLoaded = true;
+    }, 500);
+  }
+
+  onImageLoad() {
+    this.isLoaded = true;
+  }
+}

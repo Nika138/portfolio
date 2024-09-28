@@ -38,18 +38,26 @@
   </div>
   <div class="block box-border">
     <img
+      [ngClass]="{ 'fade-in': isLoaded }"
+      (load)="onImageLoad()"
       class="absolute w-[100px] top-[120px] right-[170px]"
       src="assets/top-right.png"
     />
     <img
+      [ngClass]="{ 'fade-in': isLoaded }"
+      (load)="onImageLoad()"
       class="absolute w-[100px] top-[120px] right-[490px]"
       src="assets/top-left.png"
     />
     <img
+      [ngClass]="{ 'fade-in': isLoaded }"
+      (load)="onImageLoad()"
       class="absolute w-[100px] bottom-[250px] right-[170px]"
       src="assets/bottom-right.png"
     />
     <img
+      [ngClass]="{ 'fade-in': isLoaded }"
+      (load)="onImageLoad()"
       class="absolute w-[100px] bottom-[250px] right-[490px]"
       src="assets/bottom-left.png"
     />
@@ -57,6 +65,8 @@
 
   <div class="flex w-2/5 items-start justify-start pl-16 pb-32">
     <img
+      [ngClass]="{ 'fade-in': isLoaded }"
+      (load)="onImageLoad()"
       src="assets/875739DC-9FB3-4E27-A64D-9CBE51E0159D-removebg.png"
       class="w-[325px] h-[450px] rounded-[10px]"
     />
