@@ -9,16 +9,5 @@ export const routes: Routes = [
     path: '',
     component: MainContentComponent,
   },
-  {
-    path: 'tech-stack',
-    component: TechStackComponent,
-  },
-  {
-    path: 'projects',
-    component: ProjectsComponent,
-  },
-  {
-    path: 'contacts',
-    component: ContactsComponent,
-  },
+  // { path: '**', component: NotFoundComponent },
 ];

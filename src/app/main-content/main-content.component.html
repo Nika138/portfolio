@@ -30,7 +30,6 @@
     </div>
     <div class="flex items-center justify-center py-12">
       <a
-        routerLink="/tech-stack"
         class="flex items-center justify-center bg-[#B300FF] w-[200px] h-[50px] border border-[#B300FF] rounded-[20px] hover:bg-[#020202] duration-300 hover:duration-300 cursor-pointer text-white hover:text-[#B300FF] font-medium text-lg"
         >Tech Stack</a
       >
@@ -65,8 +64,6 @@
 
   <div class="flex w-2/5 items-start justify-start pl-16 pb-32">
     <img
-      [ngClass]="{ 'fade-in': isLoaded }"
-      (load)="onImageLoad()"
       src="assets/875739DC-9FB3-4E27-A64D-9CBE51E0159D-removebg.png"
       class="w-[325px] h-[450px] rounded-[10px]"
     />

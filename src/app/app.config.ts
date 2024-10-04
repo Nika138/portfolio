@@ -1,39 +1,7 @@
-import {
-  ApplicationConfig,
-  inject,
-  provideZoneChangeDetection,
-} from '@angular/core';
-import {
-  IsActiveMatchOptions,
-  provideRouter,
-  Router,
-  withViewTransitions,
-} from '@angular/router';
+import { ApplicationConfig } from '@angular/core';
 
-import { routes } from './app.routes';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 export const appConfig: ApplicationConfig = {
-  providers: [
-    provideZoneChangeDetection({ eventCoalescing: true }),
-    provideRouter(
-      routes,
-      withViewTransitions({
-        onViewTransitionCreated: ({ transition }) => {
-          const router = inject(Router);
-          const targetUrl = router.getCurrentNavigation()!.finalUrl!;
-
-          const config: IsActiveMatchOptions = {
-            paths: 'exact',
-            matrixParams: 'ignored',
-            fragment: 'ignored',
-            queryParams: 'ignored',
-          };
-
-          if (router.isActive(targetUrl, config)) {
-            transition.skipTransition();
-          }
-        },
-      })
-    ),
-  ],
+  providers: [BrowserAnimationsModule],
 };

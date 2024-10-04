@@ -1,3 +1,4 @@
+import { animate, style, transition, trigger } from '@angular/animations';
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
@@ -8,6 +9,7 @@ import { RouterModule } from '@angular/router';
   imports: [CommonModule, RouterModule],
   templateUrl: './main-content.component.html',
   styleUrl: './main-content.component.css',
+  animations: [],
 })
 export class MainContentComponent {
   isLoaded: boolean = false;
