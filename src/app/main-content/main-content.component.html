@@ -1,71 +1,77 @@
 <section
-  class="flex flex-row xl:w-[79vw] xl:ml-[21vw] items-center justify-between bg-[#020202] h-screen"
+  class="flex flex-col md:flex-row xl:w-[79vw] xl:ml-[21vw] items-center justify-between bg-[#020202] h-screen relative"
 >
   <div
-    class="flex flex-col w-3/5 items-start justify-center space-y-6 pb-24 pl-12"
+    class="flex flex-col w-full xl:w-3/5 items-start justify-center space-y-6 p-12 xl:pl-20 xl:pb-0"
   >
     <div class="flex flex-col items-start justify-center">
-      <div class="flex items-center justify-center text-start">
-        <h1 class="text-5xl text-white font-bold">
-          Hello, my name is
-          <span class="text-[#B300FF] font-italiano font-light text-6xl"
-            >Nika Bukia</span
-          >
-        </h1>
-      </div>
-      <div
-        class="flex flex-col items-start justify-center py-3 text-start space-y-6"
-      >
-        <h1 class="text-4xl text-white font-bold">
-          I'm a <span class="text-[#B300FF]">Web Developer</span>
-        </h1>
-        <p class="text-xl text-white font-medium font-serif">
-          I'm Full-Stack Web Developer with a decent skill set and a passion for
-          crafting exceptional digital experiences<span
-            class="text-[#B300FF] text-2xl"
-            >...</span
-          >
-        </p>
-      </div>
+      <h1 class="text-4xl xl:text-5xl text-white font-bold">
+        Hello, my name is
+        <span
+          class="text-[#B300FF] font-italiano font-light text-5xl xl:text-6xl"
+        >
+          Nika Bukia
+        </span>
+      </h1>
     </div>
-    <div class="flex items-center justify-center py-12">
+
+    <div class="flex flex-col items-start justify-center py-3 space-y-6">
+      <h1 class="text-3xl xl:text-4xl text-white font-bold">
+        I'm a <span class="text-[#B300FF]">Web Developer</span>
+      </h1>
+      <p class="text-lg xl:text-xl text-white font-medium font-serif">
+        I'm a Full-Stack Web Developer with a decent skill set and a passion for
+        crafting exceptional digital experiences
+        <span class="text-[#B300FF] text-xl">...</span>
+      </p>
+    </div>
+
+    <div class="flex items-center justify-start">
       <a
-        class="flex items-center justify-center bg-[#B300FF] w-[200px] h-[50px] border border-[#B300FF] rounded-[20px] hover:bg-[#020202] duration-300 hover:duration-300 cursor-pointer text-white hover:text-[#B300FF] font-medium text-lg"
-        >Tech Stack</a
+        class="flex items-center justify-center bg-[#B300FF] w-[200px] h-[50px] border border-[#B300FF] rounded-[20px] hover:bg-[#020202] duration-300 hover:text-[#B300FF] text-white font-medium text-lg cursor-pointer"
       >
+        Tech Stack
+      </a>
     </div>
-  </div>
-  <div class="block box-border">
-    <img
-      [ngClass]="{ 'fade-in': isLoaded }"
-      (load)="onImageLoad()"
-      class="absolute w-[100px] top-[120px] right-[170px]"
-      src="assets/top-right.png"
-    />
-    <img
-      [ngClass]="{ 'fade-in': isLoaded }"
-      (load)="onImageLoad()"
-      class="absolute w-[100px] top-[120px] right-[490px]"
-      src="assets/top-left.png"
-    />
-    <img
-      [ngClass]="{ 'fade-in': isLoaded }"
-      (load)="onImageLoad()"
-      class="absolute w-[100px] bottom-[250px] right-[170px]"
-      src="assets/bottom-right.png"
-    />
-    <img
-      [ngClass]="{ 'fade-in': isLoaded }"
-      (load)="onImageLoad()"
-      class="absolute w-[100px] bottom-[250px] right-[490px]"
-      src="assets/bottom-left.png"
-    />
   </div>
 
-  <div class="flex w-2/5 items-start justify-start pl-16 pb-32">
+  <div
+    class="hidden md:flex relative w-full xl:w-2/5 items-center justify-center p-12 xl:pb-32 xl:pl-0"
+  >
+    <div class="absolute top-0 right-0">
+      <img
+        src="assets/top-right.png"
+        class="w-[70px] xl:w-[100px]"
+        alt="Decorative Corner Top Right"
+      />
+    </div>
+    <div class="absolute top-0 left-0">
+      <img
+        src="assets/top-left.png"
+        class="w-[70px] xl:w-[100px]"
+        alt="Decorative Corner Top Left"
+      />
+    </div>
+    <div class="absolute bottom-0 right-0">
+      <img
+        src="assets/bottom-right.png"
+        class="w-[70px] xl:w-[100px]"
+        alt="Decorative Corner Bottom Right"
+      />
+    </div>
+    <div class="absolute bottom-0 left-0">
+      <img
+        src="assets/bottom-left.png"
+        class="w-[70px] xl:w-[100px]"
+        alt="Decorative Corner Bottom Left"
+      />
+    </div>
+
     <img
       src="assets/875739DC-9FB3-4E27-A64D-9CBE51E0159D-removebg.png"
-      class="w-[325px] h-[450px] rounded-[10px]"
+      class="w-[250px] xl:w-[325px] h-auto rounded-[10px] fade-in"
+      alt="Nika Bukia"
     />
   </div>
 </section>
+<app-projects></app-projects>
