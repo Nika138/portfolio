@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RouterModule, RouterOutlet } from '@angular/router';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { MainContentComponent } from './main-content/main-content.component';
@@ -22,4 +22,17 @@ import { ProjectsComponent } from './components/projects/projects.component';
   styleUrl: './app.component.css',
   animations: [],
 })
-export class AppComponent {}
+export class AppComponent implements OnInit {
+  ngOnInit(): void {}
+  scrollToSection(sectionId: string): void {
+    const element = document.getElementById(sectionId);
+
+    if (element) {
+      element.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+        inline: 'nearest',
+      });
+    }
+  }
+}

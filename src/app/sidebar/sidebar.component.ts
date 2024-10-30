@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { Router, RouterModule } from '@angular/router';
 
 @Component({
@@ -9,4 +9,10 @@ import { Router, RouterModule } from '@angular/router';
   templateUrl: './sidebar.component.html',
   styleUrl: './sidebar.component.css',
 })
-export class SidebarComponent {}
+export class SidebarComponent {
+  @Output() sectionClicked = new EventEmitter<string>();
+
+  redirectToSection(sectionId: string): void {
+    this.sectionClicked.emit(sectionId);
+  }
+}

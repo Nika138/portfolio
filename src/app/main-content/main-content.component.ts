@@ -1,6 +1,6 @@
 import { animate, style, transition, trigger } from '@angular/animations';
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { ProjectsComponent } from '../components/projects/projects.component';
 import { TechStackComponent } from '../components/tech-stack/tech-stack.component';
@@ -20,7 +20,7 @@ import { ContactsComponent } from '../components/contacts/contacts.component';
   styleUrl: './main-content.component.css',
   animations: [],
 })
-export class MainContentComponent {
+export class MainContentComponent implements OnInit {
   isLoaded: boolean = false;
 
   ngOnInit() {
