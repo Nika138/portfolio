@@ -13,7 +13,7 @@
       </h2>
     </div>
     <div
-      class="flex flex-col md:flex-row justify-evenly items-center space-x-36"
+      class="flex flex-col sm:flex-row sm:justify-evenly justify-center items-center sm:space-x-12 md:space-x-36 sm:space-y-0 space-y-6"
     >
       <div class="flex flex-col text-center space-y-2">
         <div class="text-[#B300FF] text-4xl">
@@ -54,32 +54,34 @@
       <h1 class="text-3xl text-[#B300FF] font-bold">SEND ME AN EMAIL</h1>
       <h2 class="text-xl text-white font-mono font-bold">Quick to respond</h2>
     </div>
-    <div class="flex flex-col justify-center items-start space-y-8">
+    <div
+      class="flex flex-col justify-center md:items-start items-center space-y-8"
+    >
       <form
         action=""
-        class="flex flex-col space-y-8 items-start justify-center text-white"
+        class="flex flex-col space-y-8 md:items-start items-center justify-center text-white"
       >
         <div
-          class="flex flex-col md:flex-row justify-evenly items-center space-x-6"
+          class="flex flex-col md:flex-row md:justify-evenly justify-center items-center md:space-x-6 md:space-y-0 space-y-6"
         >
           <input
             type="text"
-            class="w-[400px] h-[45px] bg-[#141414] rounded-[15px] text-[#999999] placeholder:text-[#686868] outline-none border border-[#313131] pl-4"
+            class="w-[250px] xs:w-[400px] h-[45px] bg-[#141414] rounded-[15px] text-[#999999] placeholder:text-[#686868] outline-none border border-[#313131] pl-4"
             placeholder="Name"
           />
           <input
             type="text"
-            class="w-[400px] h-[45px] bg-[#141414] rounded-[15px] text-[#999999] placeholder:text-[#686868] outline-none border border-[#313131] pl-4"
+            class="w-[250px] xs:w-[400px] h-[45px] bg-[#141414] rounded-[15px] text-[#999999] placeholder:text-[#686868] outline-none border border-[#313131] pl-4"
             placeholder="Email"
           />
         </div>
         <input
           type="text"
-          class="w-[824px] h-[45px] bg-[#141414] rounded-[15px] text-[#999999] placeholder:text-[#686868] outline-none border border-[#313131] pl-4"
+          class="w-[250px] xs:w-[400px] md:w-[824px] h-[45px] bg-[#141414] rounded-[15px] text-[#999999] placeholder:text-[#686868] outline-none border border-[#313131] pl-4"
           placeholder="Subject"
         />
         <textarea
-          class="w-[824px] bg-[#141414] rounded-[15px] text-[#999999] placeholder:text-[#686868] outline-none border border-[#313131] pl-4 pt-1 resize-none"
+          class="w-[250px] xs:w-[400px] md:w-[824px] bg-[#141414] rounded-[15px] text-[#999999] placeholder:text-[#686868] outline-none border border-[#313131] pl-4 pt-1 resize-none"
           rows="6"
           placeholder="Message..."
         ></textarea>
