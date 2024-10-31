@@ -12,6 +12,7 @@
       >
         <a
           class="cursor-pointer duration-200 hover:text-[#8d8d8d] flex items-center justify-center"
+          [class.active]="activeSection === 'main'"
           (click)="redirectToSection('main')"
         >
           <i class="fa-solid fa-house mr-1 w-[24px] h-[24px]"></i>
@@ -24,6 +25,7 @@
       >
         <a
           class="cursor-pointer duration-200 hover:text-[#8d8d8d] flex items-center justify-center"
+          [class.active]="activeSection === 'techstack'"
           (click)="redirectToSection('techstack')"
         >
           <i class="fa-solid fa-microchip mr-1 w-[24px] h-[24px]"></i>
@@ -36,6 +38,7 @@
       >
         <a
           class="cursor-pointer duration-200 hover:text-[#8d8d8d] flex items-center justify-center"
+          [class.active]="activeSection === 'projects'"
           (click)="redirectToSection('projects')"
         >
           <i class="fa-solid fa-briefcase mr-1 w-[24px] h-[24px]"></i>
@@ -48,6 +51,7 @@
       >
         <a
           class="cursor-pointer duration-200 hover:text-[#8d8d8d] flex items-center justify-center"
+          [class.active]="activeSection === 'contacts'"
           (click)="redirectToSection('contacts')"
         >
           <i class="fa-solid fa-envelope mr-1 w-[24px] h-[24px]"></i>
