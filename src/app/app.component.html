@@ -1,7 +1,7 @@
 <app-sidebar (sectionClicked)="scrollToSection($event)"></app-sidebar>
 <div class="flex flex-col space-y-4">
   <app-main-content></app-main-content>
-  <app-tech-stack></app-tech-stack>
+  <app-tech-stack [isVisible]="sectionVisibility['techstack']"></app-tech-stack>
   <app-projects></app-projects>
   <app-contacts></app-contacts>
 </div>

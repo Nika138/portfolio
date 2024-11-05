@@ -6,6 +6,7 @@ import { TechStackComponent } from './components/tech-stack/tech-stack.component
 import { ContactsComponent } from './components/contacts/contacts.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { ActiveSectionService } from './services/active-section.service';
+import { animate, style, transition, trigger } from '@angular/animations';
 
 @Component({
   selector: 'app-root',
@@ -20,11 +21,26 @@ import { ActiveSectionService } from './services/active-section.service';
     ProjectsComponent,
   ],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css',
-  animations: [],
+  styleUrls: ['./app.component.css'],
+  animations: [
+    trigger('fadeIn', [
+      transition(':enter', [
+        style({ opacity: 0, transform: 'translateY(20px)' }),
+        animate(
+          '0.5s ease-out',
+          style({ opacity: 1, transform: 'translateY(0)' })
+        ),
+      ]),
+    ]),
+  ],
 })
 export class AppComponent implements OnInit, AfterViewInit, OnDestroy {
   private observer!: IntersectionObserver;
+  sectionVisibility: { [key: string]: boolean } = {
+    techstack: false,
+    contacts: false,
+    projects: false,
+  };
 
   constructor(private activeSectionService: ActiveSectionService) {}
 
@@ -38,8 +54,14 @@ export class AppComponent implements OnInit, AfterViewInit, OnDestroy {
 
     this.observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
+        const target = entry.target as HTMLElement;
+        const sectionId = target.id;
+
         if (entry.isIntersecting) {
-          this.activeSectionService.setActiveSection(entry.target.id);
+          this.activeSectionService.setActiveSection(sectionId);
+          this.sectionVisibility[sectionId] = true;
+        } else {
+          this.sectionVisibility[sectionId] = false;
         }
       });
     }, options);

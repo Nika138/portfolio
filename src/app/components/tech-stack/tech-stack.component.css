@@ -1,0 +1,8 @@
+.section {
+  opacity: 0;
+  transition: opacity 0.5s ease-out;
+}
+
+.section.visible {
+  opacity: 1;
+}
